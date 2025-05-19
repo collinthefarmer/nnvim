@@ -37,12 +37,13 @@ require("lazy").setup({
     },
 })
 
-require("config.vimopts")
-require("config.colors")
-
-vim.opt.laststatus = 0
-
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 for _, lang in pairs(require("config.langs")) do
     vim.lsp.config(lang.lang, capabilities)
 end
+
+require("config.vimopts")
+require("config.colors")
+require("config.keys")
+
+vim.opt.laststatus = 0
