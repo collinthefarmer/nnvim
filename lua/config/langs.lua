@@ -1,5 +1,18 @@
 return {
 	{
+		lang = "go",
+		filetypes = { "go" },
+		lsp = "gopls",
+		formatters = { "gofmt" },
+		completions = {
+			appearance = {
+				opts = {
+					extra_info_hl = "@comment",
+				},
+			},
+		},
+	},
+	{
 		lang = "typescript",
 		filetypes = { "ts", "tsx" },
 		lsp = "ts_ls",

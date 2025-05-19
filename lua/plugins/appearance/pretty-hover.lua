@@ -1,5 +1,5 @@
 vim.keymap.set("n", "<leader>q", function()
-	require("pretty_hover").hover()
+	require("pretty_hover").hover({ toggle = true })
 end, {
 	desc = "LSP Hover",
 })
