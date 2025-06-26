@@ -5,7 +5,7 @@ end, {
 })
 
 vim.keymap.set("n", "<leader>d", function()
-    vim.lsp.buf.declaration()
+    vim.lsp.buf.definition()
 end, {
     desc = "Goto declaration",
 })
