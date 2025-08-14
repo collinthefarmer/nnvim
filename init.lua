@@ -38,26 +38,7 @@ require("lazy").setup({
     },
 })
 
-local capabilities = require("blink.cmp").get_lsp_capabilities()
-local default_lsp_options = {
-    capabilities = capabilities,
-}
-
-for _, lang in
-    pairs(Filter(require("config.langs"), function(l)
-        return l.lsp and not l.lsp_skip_config
-    end))
-do
-    local lang_opts = lang.lsp_options
-
-    if lang_opts == nil then
-        lang_opts = {}
-    end
-
-    local opts = vim.tbl_deep_extend("keep", default_lsp_options, lang_opts)
-
-    vim.lsp.config(lang.lsp, opts)
-end
+require("config.langs").setup()
 
 require("config.vimopts")
 require("config.colors")

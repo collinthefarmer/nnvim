@@ -23,7 +23,7 @@ local function cmd_telescope_search_definition()
 end
 
 local function cmd_telescope_search_symbols()
-    tel.lsp_workspace_symbols({})
+    tel.lsp_dynamic_workspace_symbols({})
 end
 
 local function cmd_telescope_search_symbols_local()
@@ -106,7 +106,6 @@ return {
             pattern = "TelescopePreviewerLoaded",
             callback = function(args)
                 vim.opt_local.number = true
-                print(args.event)
             end,
         })
     end,

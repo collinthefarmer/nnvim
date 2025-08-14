@@ -6,5 +6,8 @@ return {
             "github:mason-org/mason-registry",
             "github:crashdummyy/mason-registry",
         },
+        ui = {
+            border = "single",
+        },
     },
 }
